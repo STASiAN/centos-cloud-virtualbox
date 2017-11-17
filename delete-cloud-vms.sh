@@ -4,6 +4,7 @@ for vm in $images; do
     if [ -f $vm.vdi ]; then
         VBoxManage controlvm $vm poweroff
         sleep 1
+        VBoxManage snapshot delete $vm-deployed
         VBoxManage unregistervm $vm --delete
     fi
     rm -rf $vm.raw $vm-cidata.iso

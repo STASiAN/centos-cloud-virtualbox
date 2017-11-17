@@ -19,10 +19,7 @@ for os in centos fedora; do
     mkisofs -output $vm-cidata.iso -volid cidata -joliet -rock user-data meta-data 2> /dev/null
     rm -rf meta-data
     if ! ls $vm*.raw 1> /dev/null 2>&1; then
-        echo wget -c $os_url; echo
-        wget -c $os_url
-        echo extract $vm.$os_ext
-        echo $vm.$os_ext | grep -iq centos && pv $centos.$centos_ext | tar xzf - || xz -dv $vm.$fedora_ext
+        wget -c $os_url && echo $vm.$os_ext | grep -iq centos && pv $centos.$centos_ext | tar xzf - || xz -dkv $vm.$fedora_ext
     fi
 
     if [ ! -f $vm.vdi ]; then
