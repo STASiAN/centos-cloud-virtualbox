@@ -10,6 +10,7 @@ package_upgrade: true
 packages:
   - bash-completion
   - bind-utils
+  - bzip2
   - conntrack-tools
   - epel-release
   - git
