@@ -1,6 +1,6 @@
 #!/bin/bash
 
-centos=CentOS-7-x86_64-GenericCloud-1710
+centos=CentOS-7-x86_64-GenericCloud-1801-01
 fedora=Fedora-Cloud-Base-27-1.6.x86_64
 centos_ext=raw.tar.gz
 fedora_ext=raw.xz
