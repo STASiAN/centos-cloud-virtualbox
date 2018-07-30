@@ -1,6 +1,6 @@
 #!/bin/bash
 
-centos=CentOS-7-x86_64-GenericCloud-1802
+centos=CentOS-7-x86_64-GenericCloud-1805
 fedora=Fedora-Cloud-Base-27-1.6.x86_64
 centos_ext=raw.tar.gz
 fedora_ext=raw.xz
@@ -9,6 +9,7 @@ fedora_url=https://download.fedoraproject.org/pub/fedora/linux/releases/27/Cloud
 sata=hardcore
 
 for os in centos fedora; do
+#for os in centos; do
     vm=${!os}
     eval os_url=\$$os\_url
     eval os_ext=\$$os\_ext

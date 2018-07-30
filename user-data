@@ -13,6 +13,7 @@ packages:
   - bzip2
   - conntrack-tools
   - epel-release
+  - gcc
   - git
   - htop
   - iftop
@@ -20,6 +21,7 @@ packages:
   - iperf
   - iptraf-ng
   - jwhois
+  - kernel-devel
   - lshw
   - lsof
   - mc
