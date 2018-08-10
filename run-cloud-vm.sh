@@ -1,11 +1,11 @@
 #!/bin/bash
 
 centos=CentOS-7-x86_64-GenericCloud-1805
-fedora=Fedora-Cloud-Base-27-1.6.x86_64
+fedora=Fedora-Cloud-Base-28-1.1.x86_64
 centos_ext=raw.tar.gz
 fedora_ext=raw.xz
 centos_url=https://cloud.centos.org/centos/7/images/$centos.$centos_ext
-fedora_url=https://download.fedoraproject.org/pub/fedora/linux/releases/27/CloudImages/x86_64/images/$fedora.$fedora_ext
+fedora_url=https://download.fedoraproject.org/pub/fedora/linux/releases/28/Cloud/x86_64/images/$fedora.$fedora_ext
 sata=hardcore
 
 for os in centos fedora; do
