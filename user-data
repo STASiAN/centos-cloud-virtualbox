@@ -6,7 +6,19 @@ ssh_pwauth: false
 ssh_authorized_keys:
   - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPUwTXh230OaL/SBqfVbw60Q+UhMskZuUBg8Nv/YOzi/ stasian@mbp15-hardcore.lan
 
+yum_repos:
+    epel:
+        baseurl: https://dl.fedoraproject.org/pub/epel/7/$basearch
+        enabled: true
+        failovermethod: priority
+        gpgcheck: true
+        gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+        name: Extra Packages for Enterprise Linux 7 - $basearch
+
+repo_update: true
+repo_upgrade: all
 package_upgrade: true
+
 packages:
   - bash-completion
   - bind-utils
