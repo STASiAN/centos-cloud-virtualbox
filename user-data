@@ -63,4 +63,4 @@ packages:
   - yum-utils
 
 runcmd:
-  - 'file="/usr/local/sbin/deploy-openstack"; curl -s repo.stasian.ru/openstack > $file && chmod +x $file'
+  - 'reboot'

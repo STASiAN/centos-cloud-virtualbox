@@ -1,5 +1,5 @@
 #!/bin/bash
-
+dir="~/VirtualBox VMs"
 centos=CentOS-7-x86_64-GenericCloud-1805
 fedora=Fedora-Cloud-Base-28-1.1.x86_64
 centos_ext=raw.tar.gz
@@ -7,7 +7,7 @@ fedora_ext=raw.xz
 centos_url=https://cloud.centos.org/centos/7/images/$centos.$centos_ext
 fedora_url=https://download.fedoraproject.org/pub/fedora/linux/releases/28/Cloud/x86_64/images/$fedora.$fedora_ext
 sata=hardcore
-
+cd $dir
 for os in centos fedora; do
 #for os in centos; do
     vm=${!os}
@@ -34,7 +34,7 @@ for os in centos fedora; do
         echo createvm $vm; echo
 
         VBoxManage createvm --name "$vm" --ostype $logo --register 2> /dev/null
-        VBoxManage modifyvm $vm --nic1 bridged --bridgeadapter1 en0 --cpus 4 --memory 4096 --chipset ich9
+        VBoxManage modifyvm $vm --nic1 bridged --bridgeadapter1 en0 --cpus 4 --memory 4096
         VBoxManage storagectl $vm --name "$sata" --add sata --portcount 1
         VBoxManage storageattach $vm --storagectl "$sata" --port 0 --device 0 --type hdd --medium $vm.vdi
         VBoxManage storageattach $vm --storagectl "$sata" --port 1 --device 0 --type dvddrive --medium $vm-cidata.iso
