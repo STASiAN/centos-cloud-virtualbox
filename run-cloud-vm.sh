@@ -1,5 +1,4 @@
 #!/bin/bash
-dir="~/VirtualBox VMs"
 centos=CentOS-7-x86_64-GenericCloud-1805
 fedora=Fedora-Cloud-Base-28-1.1.x86_64
 centos_ext=raw.tar.gz
@@ -7,7 +6,7 @@ fedora_ext=raw.xz
 centos_url=https://cloud.centos.org/centos/7/images/$centos.$centos_ext
 fedora_url=https://download.fedoraproject.org/pub/fedora/linux/releases/28/Cloud/x86_64/images/$fedora.$fedora_ext
 sata=hardcore
-cd $dir
+cd '~/VirtualBox\ VMs/'
 for os in centos fedora; do
 #for os in centos; do
     vm=${!os}
