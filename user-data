@@ -27,8 +27,6 @@ yum_repos:
         name: Docker CE Stable - $basearch
 
 package_upgrade: true
-# package_reboot_if_required: true
-
 packages:
   - bash-completion
   - bind-utils
@@ -75,5 +73,5 @@ packages:
   - yum-utils
 
 runcmd:
-  - [ systemctl, enable, docker.service ]
+  - 'systemctl enable docker.service'
   - 'needs-restarting -r || reboot'
