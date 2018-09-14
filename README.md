@@ -1,4 +1,4 @@
-<h1>Simple one click "no cloud" solution with CentOS Cloud Linux and VirtualBox</h1><br>
+<h2>Simple one click "no cloud" solution with CentOS Cloud Linux and VirtualBox</h2><br>
 What this shell files do:<br>
 <br>
 Download CentOS and Fedora images from http://cloud.centos.org<br>
